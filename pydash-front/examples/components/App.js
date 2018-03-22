@@ -7,7 +7,7 @@ import { userIsAuthenticatedRedir, userIsNotAuthenticatedRedir, userIsAdminRedir
          userIsAuthenticated, userIsNotAuthenticated } from '../auth'
 
 import AdminComponent from './Admin'
-import ProtectedComponent from './DashTileGrid'
+import ProtectedComponent from './Protected'
 import LoginComponent from './Login'
 import Home from './Home'
 
@@ -34,8 +34,8 @@ function App({ user, logout }) {
     <Router>
       <div className={styles.wrapper}>
         <nav className={styles.navigation}>
-          {/* <NavLink activeClassName={styles.active} exact to="/">Homepage</NavLink> */}
-          <NavLink activeClassName={styles.active} exact to="/protected">Home of Dashboards</NavLink>
+          <NavLink activeClassName={styles.active} exact to="/">Home</NavLink>
+          <NavLink activeClassName={styles.active} exact to="/protected">Protected</NavLink>
           <NavLink activeClassName={styles.active} exact to="/admin">Admin</NavLink>
         </nav>
         <nav className={styles.authNavigation}>
@@ -44,7 +44,7 @@ function App({ user, logout }) {
           <UserName user={user} />
         </nav>
         <div className={styles.content}>
-          <Route exact path="/" component={Login}/>
+          <Route exact path="/" component={Home}/>
           <Route path="/login" component={Login}/>
           <Route path="/protected" component={Protected}/>
           <Route path="/admin" component={Admin}/>

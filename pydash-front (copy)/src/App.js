@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
-import Login from './login/Login';
+import Login from './components/Login';
 import DashTileGrid from './overview/DashTileGrid';
+import Home from './components/Home'
 import { Switch, Route } from 'react-router-dom'
 
 class App extends Component {
