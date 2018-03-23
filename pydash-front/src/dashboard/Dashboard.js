@@ -44,5 +44,5 @@ class Dashboard extends Component {
     }
 }
 
-export default withStyles(styles)(Dashboard)
-// export default connect(state => ({ authData: state.user.data }))(withStyles(styles)(Dashboard))
+// export default withStyles(styles)(Dashboard)
+export default connect(state => ({ authData: state.user.data }))(withStyles(styles)(Dashboard))
