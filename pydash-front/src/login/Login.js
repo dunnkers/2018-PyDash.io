@@ -1,9 +1,16 @@
 import React, { Component } from 'react';
+import { PropTypes } from 'prop-types'
+import { connect } from 'react-redux'
+import { login } from '../actions/user'
 import './Login.css';
 import Button from 'material-ui/Button';
 import TextField from 'material-ui/TextField';
 
 class Login extends Component {
+    static propTypes = {
+        login: PropTypes.func.isRequired
+    };
+
     state = {
         username: '',
         password: ''
@@ -51,4 +58,4 @@ class Login extends Component {
     }
 }
 
-export default Login;
+export default connect(null, { login })(Login)
