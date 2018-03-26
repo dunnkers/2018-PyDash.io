@@ -15,6 +15,8 @@ zeo = "*"
 flask-restplus = "*"
 pyjwt = "*"
 requests = "*"
+tornado = "*"
+chronospy = "*"
 
 
 [dev-packages]
